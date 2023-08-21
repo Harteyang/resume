@@ -1,0 +1,429 @@
+
+<!doctype html>
+<html>
+	<head>
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
+	
+	<title>harteyang</title>
+
+	<style>
+	body {
+    background: #EEEEEE;
+    font-family: sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 40px 0;
+}
+
+em {
+    color: #999;
+}
+
+p {
+    line-height: 1.4;
+}
+
+ul {
+    margin-bottom: 0;
+}
+
+li {
+    margin-bottom: 2px;
+}
+
+a {
+    text-decoration: none;
+}
+
+#resume {
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 80px 100px;
+    background: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 4px #aaa;
+    -webkit-box-shadow: 2px 2px 4px #aaa;
+    
+}
+
+.coursesList {
+    width: 28%;
+    vertical-align: top;
+    display: inline-block;
+}
+
+.largeFont {
+    font-size: 24px;
+}
+
+.smallFont {
+    font-size: 12px;
+}
+
+.sectionBlock {
+    display: flex;
+    width: 100%;
+}
+
+.sectionName {
+    width: 13%;
+    vertical-align: top;
+    display: inline-block;
+}
+
+.sectionContent {
+    width: 85%;
+    vertical-align: top;
+    display: inline-block;
+}
+
+.sectionContent ul {
+    padding-left: 20px;
+    margin-top: 6px;
+    list-style-type: circle;
+}
+
+.sectionContent .title {
+    font-weight: bold;
+}
+
+.sectionContent .date {
+    float: right;
+}
+
+.sectionContent .separator {
+    height: 14px;
+}
+
+.sectionLine {
+    border-style: dashed;
+    border-width: 1px;
+    border-color: #CFCFCF;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.divider {
+    font-weight: bold;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.summary {
+    margin-top: 6px;
+}
+
+.skillBlock {
+    margin-bottom: 4px;
+}
+
+.jobBlock {
+    page-break-inside: avoid;
+}
+
+.description {
+    text-align: justify;
+}
+a:link {
+  color: red;
+}
+
+blockquote.reference {
+    margin: 0;
+    margin-bottom: 1em;
+}
+
+
+/* Media Queries */
+
+@media only screen and (max-width: 40em) {
+    body {
+        margin: 0;
+        font-size: 14px;
+    }
+    #resume {
+        margin: 0 auto;
+        max-width: 600px;
+        padding: 0.5em 1em;
+        border: none;
+    }
+    .sectionBlock {
+        flex-direction: column;
+    }
+    .sectionContent {
+        width: 100%;
+    }
+    .sectionContent .date {
+        padding-right: 2em;
+    }
+    .sectionName {
+        width: auto;
+    }
+    .largeFont {
+        font-size: 20px;
+    }
+    .smallFont {
+        font-size: 14px;
+    }
+}
+
+@media print {
+    body {
+        background: #FFFFFF;
+    }
+    #resume {
+        margin: 0 auto;
+        max-width: 600px;
+        padding: 0px 0px;
+        border: 0px;
+        background: #fff;
+        box-shadow: none;
+        -webkit-box-shadow: none;
+    }
+    a {
+        color: black;
+    }
+}
+	</style>
+	
+	</head>
+	<body>
+	
+	<div id="resume">
+		<div id='nameBlock' class='largeFont'>
+			<span class='name'>
+				杨强
+			</span>
+			<span class='label'>[人力资源管理]</span>
+            
+		</div>
+        <br/>
+		<div id='basicsBlock' class='Font'>
+			<div class='contactBlock'>
+				<span class='email'>邮箱:harteyang@gmail.com</span>
+				<span class='divider'>|</span>
+				<span class='address'>居住地:成都</span>
+                <span class='divider'>|</span>
+                <span class='url'>
+					<a>个人主页:</a> <a href='https://harte.top'>www.harte.top</a>
+				</span>
+			</div>
+		</div>
+		
+		<div class='sectionLine'></div>
+		<div id='summaryBlock' class="sectionBlock">
+			<div class='sectionName'>
+				<span>个人简介</span>
+			</div>
+			<div class='sectionContent'>
+				<span>
+                    <li>13年的人力资源经验，任职过模块专家、人资经理和区域人力负责人，目前专注于HRBP(人力资源业务合作伙伴)的工作；</li>
+                    <li>涉猎IT互联网、人工智能、在线教育等行业；历任公司均为行业里TOP；</li>
+                    <li>创业成败各1次，2次从0到1搭建区域团队，最短2个月搭建完100人技术团队，交付过千万级的政府履约项目;</li>
+                    <li>成功落地过公司和业务战略，建立过整套人力资源的制度和体系，平稳支撑过亿级的业务体量。</li>
+                </span>
+			</div>
+		</div>
+
+		<div class='sectionLine'></div>
+		<div id='workBlock' class="sectionBlock">
+			<div class='sectionName'>
+				<span>工作经历</span>
+			</div>
+			<div class='sectionContent'>
+				<div class="jobBlock">
+					<div class='blockHeader'>
+						<span class='title'>超有爱科技（百词斩）</span>
+						 | <span class="position">HRBP</span>
+						<span class='date'>
+							2021-04 &mdash; 至今
+						</span>
+					</div>
+					<div><a href=''></a></div>
+					<div class="summary">
+                        <p>
+						<b>岗位职责：</b>
+                            <br/>
+                            <a>1.2021-2023年3月：</a>
+                            <br/>
+                            <a>HR侧负责反向推动人力资源部BP和COE工作模式的转型（类似于前后台的模式）；</a>
+                            <br/>
+                            <a>业务侧承担成人英语板块的所有业务BP的工作；</a>
+                            <br/>
+                            <a>2.2023年3月以后：主要承担SKU研发+市运销的销售团队的BP工作；</a>
+                        </p>
+                        <p>
+                        <b>工作成果：</b>
+                            <br/>
+                            <a>1.成功的推动了百词斩HR团队工作模式的转型和变革，从传统的人力资源模式转向前后台和三支柱； </a>
+                            <br/>
+                            <a>2.从战略、组织和文化侧支撑了百词斩成人英语版块的业务扩张，跑通了低转高模式，2021年实现1.2亿营收（HR团队唯一拿到最高绩效S）；</a>
+                            <br/>
+                            <a>3.主导了1次，参与了3次公司的重大组织结构调整，顺利支撑了公司在双减期间的业务转型；</a>
+                        </p>
+					</div>
+					<div class='separator'></div>
+				</div>
+				<div class="jobBlock">
+					<div class='blockHeader'>
+						<span class='title'>旷视科技（Face++）</span>
+						 | <span class="position">区域人力负责人</span>
+						<span class='date'>
+							2018-03 &mdash; 2021-04
+						</span>
+					</div>
+					<div><a href=''></a></div>
+					<div class="summary">
+                        <p>
+						<b>岗位职责：</b>
+                            <br/>
+                            <a>1.落地旷视区域化战略，完成华南三地的政府回款指标；</a>
+                            <br/>
+                            <a>2.从0-1搭建区域团队，实现业务在区域平稳落地；</a>
+                            <br/>
+                            <a>3.推动区域业务闭环和探索自负盈亏的模式；</a>
+                            <br/>
+                            <a>4.所负责区域的员工体验团队（人力、行政和IT）的管理</a>
+                        </p>
+                        <p>
+                            <b>工作成果：</b>
+                            <br/>
+                            <a>1.搭建了区域HR团队招聘交付的能力，2018年完成区域业务团队搭建，支撑了政府2819万回款（旷视所有区域排名第一，当年团队成员获得公司最高绩效）；</a>
+                            <br/>
+                            <a>2.通过将公司制度和流程区域化，支撑了2019年底武汉和成都区域业务闭环，完成回款2000万（当年度唯一获得公司业务特殊绩效激励）；</a>
+                            <br/>
+                            <a>3.建立了北京总部和武汉团队的沟通机制，拉齐了两地的文化和工作节奏，推动了安防工程和数据中心在武汉区域化落地，通过北京和武汉高效协作，降低了2020年新冠疫情的影响。</a>
+                            <br/>
+                            <a>4.参与收购和主导人力资源整合，快读推动了成都+深圳团队实现消费物联网全闭环，2021年实现项目收入过亿，首次盈利；</a>
+                        </p>
+        
+					</div>
+					<div class='separator'></div>
+				</div>
+				<div class="jobBlock">
+					<div class='blockHeader'>
+						<span class='title'>果小美</span>
+						 | <span class="position">HRBP经理</span>
+						<span class='date'>
+							2017-09 &mdash; 2018-03
+						</span>
+					</div>
+					<div><a href=''></a></div>
+					<div class="summary">
+						<p>
+                            <b>岗位职责：</b>
+                            <br/>
+                            <a>1.从0-1搭建总部职能团队（产研、供应链、中后台）；</a>
+                            <br/>
+                            <a>2.建立三支柱模式的人力资源体系，支撑业务快速扩张（制度、流程、信息化）；</a>
+                            <br/>
+                            <a>3.总部所有职能的HRBP工作规划和人员管理；</a>
+                        </p>
+                        <p>
+                            <b>工作成果：</b>
+                            <br/>
+                            <a>1.创立初期3个月完成中后台团队及产研100人规模的搭建，为C轮融资创造了必要条件；</a>
+                            <br/>
+                            <a>2.搭建的制度流程和体系支撑了团队快速扩张到3000人的规模；</a>
+                        </p>
+                        </div>
+                
+					<div class='separator'></div>
+				</div>
+				<div class="jobBlock">
+					<div class='blockHeader'>
+						<span class='title'>今目标科技</span>
+						 | <span class="position">人力资源经理</span>
+						<span class='date'>
+							2015-09 &mdash; 2017-09
+						</span>
+					</div>
+					<div><a href=''></a></div>
+					<div class="summary">
+						<p>
+                            <b>岗位职责：</b>
+                            <br/>
+                            <a>1.落地第二总部战略，搭建成都分公司；</a>
+                            <br/>
+                            <a>2.负责成都和厦门的人力资源管理工作；</a>
+                            <br/>
+                            <a>3.探索区域管理协作模式。</a>
+                        </p>
+                        <p>
+                            <b>工作成果：</b>
+                            <br/>
+                            <a>1.2015年半年时间搭建完成都团队（30人产研团队）初步实现三端项目闭环；</a>
+                            <br/>
+                            <a>2.推动项目闭环，2016年完成6个项目在成都独立闭环开发；</a>
+                            <br/>
+                            <a>3.配合业务成功跑通敏捷开发模式，最终降低30%的开发成本；</a>
+                        </p>
+                        </div>
+					
+					<div class='separator'></div>
+				</div>
+				<div class="jobBlock">
+					<div class='blockHeader'>
+						<span class='title'>IObit Co, Ltd. </span>
+						 | <span class="position">资深招聘专家</span>
+						<span class='date'>
+							2012-01 &mdash; 2015-09
+						</span>
+					</div>
+					<div><a href=''></a></div>
+					<div class="summary">
+						<p>
+                            <b>岗位职责：</b>
+                            <br/>
+                            <a>1.主要负责招聘和员工关系板块的所有工作内容；</a>
+                            <br/>
+                            <a>2.参与公司上市前的项目型的工作，包括新业务符合、剥离等；</a>
+                        </p>
+                        <p>
+                            <b>工作成果：</b>
+                            <br/>
+                            <a>1.招聘达成率：任职期间重点岗位100%，所有岗位90%以上（2012年因招聘业绩突出被评为优秀员工）；</a>
+                            <br/>
+                            <a>2.主导了公司的招聘体系，搭建了公司的招聘网站（2012年使用至今）；</a>
+                            <br/>
+                            <a>3.所负责的招聘和员工关系的流程和项目均通过了上市审计；</a>
+                            <br/>
+                            <a>4.支持了游戏、电商等项目的孵化和剥离；</a>
+                        </p>
+
+                        </div>
+				
+					<div class='separator'></div>
+				</div>
+			
+				
+			</div>
+		</div>
+        <div class='sectionLine'></div>
+		<div id='education' class="sectionBlock">
+			<div class='sectionName'>
+				<span>教育背景</span>
+			</div>
+			<div class='sectionContent'>
+				<div class='educationBlock'>
+					<span class='title'>
+						电子科技大学（成都学院）
+					</span>
+					<span class='date'>
+						2006-09 &mdash; 2010-07
+					</span>
+					<div class=''>
+						通信工程&生物工程
+					</div>
+				
+				</div>
+				
+			</div>
+		</div>
+		<div class='sectionLine'></div>
+		
+		
+	</body>
+</html>
