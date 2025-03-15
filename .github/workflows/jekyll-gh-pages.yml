@@ -39,18 +39,28 @@ jobs:
   #      uses: actions/upload-pages-artifact@v2
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write  # 显式声明权限
     steps:
     - name: Checkout
       uses: actions/checkout@v4
 
-    - name: Build
-      run: make build
+    - name: Install Dependencies
+      run: npm install  # 确保依赖安装
 
-    - name: Upload
+    - name: Build
+      run: npm run build
+      # 调试步骤：检查生成文件
+      # 如果失败，此处会直接暴露错误
+
+    - name: List Files (Debug)
+      run: ls -R build/  # 验证路径是否存在
+
+    - name: Upload Artifact
       uses: actions/upload-artifact@v4
       with:
         name: build-output
-        path: build/
+        path: build/  # 确保路径匹配
 
 
 
