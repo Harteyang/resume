@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="zh">
 <head>
@@ -50,10 +49,11 @@
 
         /* Section Styles */
         .section {
-            margin-bottom: 40px;
             opacity: 0;
             transform: translateY(20px);
             transition: all 0.8s ease-in-out;
+            display: flex;
+            margin-bottom: 20px; /* Reduced margin */
         }
 
         .section.visible {
@@ -62,20 +62,21 @@
         }
 
         .section-title {
-            width: auto;
+            width: 10%;
             flex-shrink: 0;
             padding: 5px 10px;
             font-weight: bold;
+            # background-color: #f0f0f0;
         }
 
         .section-content {
-            flex-grow: 1;
+            width: 90%;
             padding-left: 20px;
         }
 
         /* Experience Block */
         .experience-block {
-            margin-bottom: 20px;
+            margin-bottom: 10px; /* Reduced margin */
         }
 
         .experience-header {
@@ -108,7 +109,7 @@
 
         /* Annotation Styles */
         .annotation {
-            color: #FFA500; /* 橘色 */
+            color: #FFA500; /* 橙色 */
             text-decoration: none; /* 取消下划线 */
             position: relative;
             cursor: pointer;
@@ -166,14 +167,17 @@
         @media (max-width: 768px) {
             .section {
                 flex-direction: column;
+                margin-bottom: 10px; /* Reduced margin */
             }
 
             .section-title {
                 width: auto;
                 margin-bottom: 10px;
+                background-color: inherit;
             }
 
             .section-content {
+                width: auto;
                 padding-left: 0;
             }
 
@@ -248,15 +252,14 @@
                         <p><strong>岗位职责：</strong></p>
                         <ul class="content-list">
                             <li>负责西区（成都、重庆、西安、昆明）所有人力资源工作；
-                                <a href="https://example.com/human-resource-planning" target="_blank" class="annotation" title="极越西区人力规划方案">【人力资源规划】</a>
                             </li>
                             <li>管理西区SSC团队，保障西区&中区（武汉&长沙）门店运营；</li>
                             <li>支持公司新媒体创新项目落地，推动直播项目COE工作；</li>
                         </ul>
                         <p><strong>工作成果：</strong></p>
                         <ul class="content-list">
-                            <li>人力规划：协同区总解决了西区人力规划问题，满编率和稳定性做到了全国前2水平；招聘&保留成本持续全国最低；
-                                <a href="https://example.com/human-resource-planning" target="_blank" class="annotation" title="极越西区人力规划方案">【人力资源规划】</a>
+                            <li><a href="https://example.com/human-resource-planning" target="_blank" class="annotation" title="极越西区人力规划方案">人力资源规划</a>：协同区总解决了西区人力规划问题，满编率和稳定性做到了全国前2水平；招聘&保留成本持续全国最低；
+                                
                             </li>
                             <li>绩效激励：参与总部销售激励政策制定，基于区域情况，组织绩效解读、申诉反馈等机制；完成目标、执行、奖惩激励闭环管理；与区总制定月度赛马机制，落地执行后保障了西区销售业绩稳居全国前三；</li>
                             <li>组织能力建设：定期组织诊断&人员盘点，基于公司框架制定了西区的晋升选拔标准和培养计划，长期来看解决了区域管理层能力不足的问题；短期解决了人员保留和引进的问题；2个季度实现了主管满编率全国第二，店长满编率100%；</li>
@@ -267,19 +270,26 @@
                     </div>
                 </div>
                 <div class="experience-block">
-                    <div class="experience-header"><div class="company-title">成都超有爱科技（百词斩） |  HRBP</div><div class="date">2021/4 — 2024/2</div></div>
+                    <div class="experience-header">
+                        <div class="company-title">
+                            成都超有爱科技（百词斩） |  HRBP
+                        </div>
+                        <div class="date">2021/4 — 2024/2</div>
+                    </div>
                     <div class="experience-content">
                         <p><strong>岗位职责：</strong></p>
                         <ul class="content-list">
                             <li>2021-2023年3月：
                                 <br>
-                                业务侧承担成人英语板块的所有业务BP的工作内容；
+                                务侧承担成人英语板块的所有业务BP的工作内容；
                                 <br>
-                                搭建核心业务（成人文）商业化落地的组织能力；
+                                搭建核芯业务（成⼈英语）商业化落地的组织能⼒；
                             </li>
-                            <li>2023年3月-2024年2月：
+                            <li>2023年3月-2024年2月
                                 <br>
-                                主要承担SKU研发+市运销的销售团队的BP工作内容；搭建新产品研发模式的团队、保障课程产品研发效率的提升
+                                主要承担SKU研发+市运销的销售团队的BP工作内容；
+                                <br>
+                                搭建新产品研发模式的团队、保障课程产品研发效率的提升
                             </li>
                         </ul>
                         <p><strong>工作成果：</strong></p>
@@ -287,26 +297,31 @@
                             <li>战略及目标：BP战略中台明确商业化团队经营目标与可达路径，生成季度工作目标及监督检查机制。</li>
                             <li>团队搭建0-1：搭建销售低转高团队（500人）、产品研发团队（40人）、市场投放团队（40人），研发、投放、销售闭环，4个SKU，当月营收2000W；</li>
                             <li>组织变革：推动市运销团队销售模式升级为低转高，参与公司AIGC研究及产品研发团队模式迭代，引进MCN投放思路孵化新媒体渠道投放团队。</li>
-                            <li>组织能力搭建
+                            <li>组织能力搭建：
                                 <br>
-                                管理能力：联合HR建立市运团销队管理晋升路径，提炼了关键的管理能力和业绩指标。
+                                管理能力：联合HR建立市运团销队管理晋升路径，提炼了关键的管理能⼒和业绩指标。
                                 <br>
                                 员工能力：搭建了销售服务岗数据指标体系做到汰换有依据，完善职能岗通过IDP与绩效管理保障能力意愿降低主动流失，通过AI赋能新人缩短开单周期。
                                 <br>
                                 协作机制：协助CEO开发分歧处理课程，通过体系化思路化解业务矛盾，共识会议流程机制，提升跨部门协作效率。</li>
-                            <li>业绩结果：
+                            <li>业绩结果：  
                                 <br>
-                                2021年完成挑战值，实现1.2亿营收（HR团队唯一拿到最高绩效S）；
+                                 2021年完成挑战值，实现1.2亿营收（HR团队唯⼀拿到最⾼绩效S）；   
                                 <br>
-                                2022年超过了公司基准值，实现1.6亿的营收；
-                                <br>
-                                2023年守住老业务保底业绩（1.7亿）同时支撑了出国5倍的业绩增长（70W到380W/月）；
-                            </li>
+                                 2022年超过了公司基准值，实现1.6亿的营收；
+                                <br>   
+                                 2023年守住⽼业务保底业绩（1.7亿）同时⽀撑了出国5倍的业绩增⻓（70W到380W/⽉）；</li>
+                            
                         </ul>
                     </div>
                 </div>
                 <div class="experience-block">
-                    <div class="experience-header"><div class="company-title">北京旷视科技（Face++） | 区域人力负责人</div><div class="date">2018/3 — 2021/4</div></div>
+                    <div class="experience-header">
+                        <div class="company-title">
+                            北京旷视科技（Face++） | 区域人力负责人
+                        </div>
+                        <div class="date">2018/3 — 2021/4</div>
+                    </div>
                     <div class="experience-content">
                         <p><strong>岗位职责：</strong></p>
                         <ul class="content-list">
@@ -320,34 +335,61 @@
                             <li>搭建了区域HR团队招聘交付的能力，2018年完成区域业务团队搭建，支撑了政府2819万回款（所有区域排名第一，团队成员获得公司最高绩效）；</li>
                             <li>通过将公司制度和流程区域化，支撑了2019年底武汉和成都区域业务闭环，完成回款2000万（当年度唯一获得公司业务特殊绩效激励）；</li>
                             <li>建立了北京总部和武汉团队的沟通机制，拉齐了两地的文化和工作节奏，推动了安防工程和数据中心在武汉区域化落地，通过北京和武汉高效协作，降低了2020年新冠疫情的影响。</li>
-                            <li>参与收购和主导人力资源整合，快速推动了成都+深圳团队实现消费物联网全闭环，2021年实现项目收入过亿，首次盈利；</li>
+                            <li>参与收购和主导人力资源整合，快读推动了成都+深圳团队实现消费物联网全闭环，2021年实现项目收入过亿，首次盈利；</li>
                         </ul>
                     </div>
                 </div>
                 <div class="experience-block">
-                    <div class="experience-header"><div class="company-title">果小美（新零售无人货架） | HRBP经理</div><div class="date">2017/9 — 2018/3</div></div>
+                    <div class="experience-header">
+                        <div class="company-title">
+                            果小美（新零售无人货架） | HRBP经理
+                        </div>
+                        <div class="date">2017/9 — 2018/3</div>
+                    </div>
                 </div>
                 <div class="experience-block">
-                    <div class="experience-header"><div class="company-title">今目标科技（企业办公软件） | 人力资源经理</div><div class="date">2015/9 — 2017/9</div></div>
+                    <div class="experience-header">
+                        <div class="company-title">
+                            今目标科技（企业办公软件） | 人力资源经理
+                        </div>
+                        <div class="date">2015/9 — 2017/9</div>
+                    </div>
                 </div>
                 <div class="experience-block">
-                    <div class="experience-header"><div class="company-title">IObit（港股上市公司） | 资深招聘专家</div><div class="date">2012/1 — 2015/9</div></div>
+                    <div class="experience-header">
+                        <div class="company-title">
+                            IObit（港股上市公司） | 资深招聘专家
+                        </div>
+                        <div class="date">2012/1 — 2015/9</div>
+                    </div>
                 </div>
                 <div class="experience-block">
-                    <div class="experience-header"><div class="company-title">Sunstar（汇源集团） | 管理培训生</div><div class="date">2009/7 — 2012/1</div></div>
+                    <div class="experience-header">
+                        <div class="company-title">
+                            Sunstar（汇源集团） | 管理培训生
+                        </div>
+                        <div class="date">2009/7 — 2012/1</div>
+                    </div>
                 </div>
+                <!-- 类似地继续添加其他工作经历... -->
             </div>
         </section>
         <div class='sectionLine'></div>
         <section class="section">
             <div class="section-title">教育背景</div>
             <div class="section-content">
-                <div class="experience-header"><div class="company-title">电子科技大学（成都学院） | 本科</div><div class="date">2006/9 — 2010/7</div></div>
+                <div class="experience-header">
+                    <div class="company-title">
+                        电子科技大学（成都学院） | 本科
+                    </div>
+                    <div class="date">2006/9 — 2010/7</div>
+                </div>
                 <div>通信工程&生物工程</div>
             </div>
         </section>
     </div>
 </body>
 </html>
+
 
 
