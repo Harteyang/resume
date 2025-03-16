@@ -7,35 +7,213 @@
     <title>杨强 - 简历</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <style>
-        body { background: #f5f5f5; font-family: sans-serif; font-size: 14px; line-height: 1.5; margin: 0; padding: 20px; }
-        .resume-container { max-width: 900px; margin: 0 auto; padding: 40px; background: #fff; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); }
-        .header { margin-bottom: 30px; }
-        .name-title { font-size: 24px; margin-bottom: 15px; }
-        .contact-info { display: flex; flex-wrap: wrap; gap: 15px; }
-        .contact-info i { margin-right: 5px; color: #666; }
-        .section { margin-bottom: auto; display: flex; }
-        .section-title { width: auto; flex-shrink: 0; padding: 5px 10px; font-weight: bold; }
-        .section-content { flex-grow: 1; padding-left: 20px; }
-        .experience-block { margin-bottom: auto; }
-        .experience-header { display: flex; justify-content: space-between; align-items: center; padding: 5px 1px; }
-        .company-title { font-weight: bold; }
-        .content-list { margin: 0; padding-left: 20px; }
-        .content-list li { margin-bottom: 8px; }
-        .sectionLine { border-style: dashed; border-width: 1px; border-color: #CFCFCF; margin-top: 10px; margin-bottom: 10px; }
+        /* Base Styles */
+        body {
+            background: #f5f5f5;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            font-size: 14px;
+            line-height: 1.5;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* Resume Container */
+        .resume-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px;
+            background: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        /* Header Styles */
+        .header {
+            margin-bottom: 30px;
+        }
+
+        .name-title {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .contact-info i {
+            margin-right: 5px;
+            color: #666;
+        }
+
+        /* Section Styles */
+        .section {
+            margin-bottom: 40px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s ease-in-out;
+        }
+
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .section-title {
+            width: auto;
+            flex-shrink: 0;
+            padding: 5px 10px;
+            font-weight: bold;
+        }
+
+        .section-content {
+            flex-grow: 1;
+            padding-left: 20px;
+        }
+
+        /* Experience Block */
+        .experience-block {
+            margin-bottom: 20px;
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 1px;
+        }
+
+        .company-title {
+            font-weight: bold;
+        }
+
+        /* List Styles */
+        .content-list {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .content-list li {
+            margin-bottom: 8px;
+        }
+        .sectionLine {
+            border-style: dashed;
+            border-width: 1px;
+            border-color: #CFCFCF;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        /* Annotation Styles */
+        .annotation {
+            color: #FFA500; /* 橘色 */
+            text-decoration: none; /* 取消下划线 */
+            position: relative;
+            cursor: pointer;
+        }
+
+        /* Tooltip Styles */
+        .tooltip {
+            visibility: hidden;
+            background-color: #333; /* 深灰色背景 */
+            color: #fff;
+            text-align: center;
+            border-radius: 4px;
+            padding: 8px 12px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%; /* Position above the link */
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+            white-space: nowrap;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* 添加阴影效果 */
+        }
+
+        .tooltip::after {
+            content: '';
+            position: absolute;
+            top: 100%; /* Arrow at the bottom of the tooltip */
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #333 transparent transparent transparent;
+        }
+
+        .annotation:hover .tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .annotation:hover {
+            animation: pulse 0.5s infinite alternate;
+        }
+
+        @keyframes pulse {
+            from {
+                transform: scale(1);
+            }
+            to {
+                transform: scale(1.05);
+            }
+        }
+
+        /* Responsive Design */
         @media (max-width: 768px) {
-            .section { flex-direction: column; }
-            .section-title { width: auto; margin-bottom: 10px; }
-            .section-content { padding-left: 0; }
-            .experience-header { flex-direction: column; align-items: flex-start; }
-            .date { margin-top: 5px; }
-            .resume-container { padding: 20px; }
+            .section {
+                flex-direction: column;
+            }
+
+            .section-title {
+                width: auto;
+                margin-bottom: 10px;
+            }
+
+            .section-content {
+                padding-left: 0;
+            }
+
+            .experience-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .date {
+                margin-top: 5px;
+            }
+
+            .resume-container {
+                padding: 20px;
+            }
         }
     </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const sections = document.querySelectorAll('.section');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
 </head>
 <body>
     <div class="resume-container">
         <header class="header">
-            <div class="name-title">杨强 | 人力资源管理</div>
+            <div class="name-title">
+                杨强 | 人力资源管理
+            </div>
             <div class="contact-info">
                 <span><i class="fa fa-male"></i>1988年(36岁)</span>
                 <span><i class="fas fa-home"></i>四川成都</span>
@@ -60,17 +238,26 @@
             <div class="section-title">工作经历</div>
             <div class="section-content">
                 <div class="experience-block">
-                    <div class="experience-header"><div class="company-title">上海集度科技（极越汽车） | 西区人力负责人</div><div class="date">2024/4 — 至今</div></div>
+                    <div class="experience-header">
+                        <div class="company-title">
+                            上海集度科技（极越汽车） | 西区人力负责人
+                        </div>
+                        <div class="date">2024/4 — 至今</div>
+                    </div>
                     <div class="experience-content">
                         <p><strong>岗位职责：</strong></p>
                         <ul class="content-list">
-                            <li>负责西区（成都、重庆、西安、昆明）所有人力资源工作；</li>
+                            <li>负责西区（成都、重庆、西安、昆明）所有人力资源工作；
+                                <a href="https://example.com/human-resource-planning" target="_blank" class="annotation" title="极越西区人力规划方案">【人力资源规划】</a>
+                            </li>
                             <li>管理西区SSC团队，保障西区&中区（武汉&长沙）门店运营；</li>
                             <li>支持公司新媒体创新项目落地，推动直播项目COE工作；</li>
                         </ul>
                         <p><strong>工作成果：</strong></p>
                         <ul class="content-list">
-                            <li>人力规划：协同区总解决了西区人力规划问题，满编率和稳定性做到了全国前2水平；招聘&保留成本持续全国最低；</li>
+                            <li>人力规划：协同区总解决了西区人力规划问题，满编率和稳定性做到了全国前2水平；招聘&保留成本持续全国最低；
+                                <a href="https://example.com/human-resource-planning" target="_blank" class="annotation" title="极越西区人力规划方案">【人力资源规划】</a>
+                            </li>
                             <li>绩效激励：参与总部销售激励政策制定，基于区域情况，组织绩效解读、申诉反馈等机制；完成目标、执行、奖惩激励闭环管理；与区总制定月度赛马机制，落地执行后保障了西区销售业绩稳居全国前三；</li>
                             <li>组织能力建设：定期组织诊断&人员盘点，基于公司框架制定了西区的晋升选拔标准和培养计划，长期来看解决了区域管理层能力不足的问题；短期解决了人员保留和引进的问题；2个季度实现了主管满编率全国第二，店长满编率100%；</li>
                             <li>文化氛围：从无到有组织西区allhands，实现目标和业绩结果透传一线，优秀业绩&价值观行为的表彰；组织周度和月度的销冠分享，树立了榜样和分享机制；定期的整肃规则宣贯，实时的整肃处罚，维护了西区的市场环境，西区恶意切单和违规返现等情况一致处于全国最低水平；</li>
